@@ -18,25 +18,26 @@
 
 namespace test
 
-participant SampleParticipant identified by participantId {
-  o String participantId
-  o String firstName
-  o String lastName
+participant TenderCompany identified by companyId {
+  o String companyId
+  o String companyName
+  o String gstId
+  o String ownerName
+  o String companyAddress
+  o String contact
 }
 
-asset SampleAsset identified by assetId {
-  o String assetId
-  --> SampleParticipant owner
-  o String value
+asset Tender identified by tenderId {
+  o String tenderId
+  o String name
+  o String duration
+  o String department
+  o String place
+  o Boolean isAllocated default = false
+  o Boolean isOpen default = true
 }
 
 transaction SampleTransaction {
-  --> SampleAsset asset
-  o String newValue
-}
-
-event SampleEvent {
-  --> SampleAsset asset
-  o String oldValue
-  o String newValue
+  --> TenderCompany company
+  --> Tender tender
 }
