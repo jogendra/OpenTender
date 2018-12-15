@@ -33,7 +33,9 @@ asset Tender identified by tenderId {
   o String duration
   o String department
   o String place
+  o String deadline
   o TenderCompany[] appliedCompnies
+  o Integer[] proposedAmmounts
   o Boolean isAllocated default = false
   o Boolean isOpen default = true
 }
