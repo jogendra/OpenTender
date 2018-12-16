@@ -38,6 +38,7 @@ asset Tender identified by tenderId {
   o Integer[] proposedAmmounts
   o Boolean isAllocated default = false
   o Boolean isOpen default = true
+  o TenderCompany allocatedCompany
 }
 
 transaction TenderApplyTransaction {
