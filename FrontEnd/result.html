@@ -1,0 +1,327 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>Results</title>
+
+    <style>
+            
+            .btn-grad 
+{
+    
+    position: absolute;
+    width: auto;
+    height: 40px;
+    font-size: auto;
+    text-align: center;
+    background: linear-gradient(90deg, #008ECB 0%, #005AE0 100%);
+    border-radius: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+    
+}
+
+.btn-grad:hover
+{
+    border:2px solid rgb(0, 75, 107);
+    background: linear-gradient(90deg,#005AE0 0%, #008ECB 100%);
+    
+
+}
+
+
+#scroll
+{
+    width:auto;
+    border: 1px solid black;
+    height: 500px;
+    overflow: scroll;
+    margin: 60px;
+    margin-right: 110px;
+    margin-top:20px;
+    scroll-behavior: smooth;
+    
+    
+}
+
+
+th 
+{
+    border: 1px solid #D5D5D5;
+    padding: 25px;  
+    height: 80px;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+
+td
+{
+    border: 1px solid #D5D5D5;
+    text-align: center;
+    padding: 25px;
+    height: 60px;
+    align-content: center;
+}
+  a 
+  {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 16px;
+  }
+
+  a:hover {
+      background-color: #ddd;
+      color: black;
+  }
+
+  .previous {
+      background-image: linear-gradient(to right, #E44D26 0%, #F16529 51%, #E44D26 100%);
+      color: rgb(255, 255, 255);
+      border-radius: 5px;
+      width: 120px;
+      text-align: center;
+      font-weight: bolder;
+  }
+
+  .next {
+      background-image: linear-gradient(to right, #E44D26 0%, #F16529 51%, #E44D26 100%);
+      color: rgb(255, 255, 255);
+      border-radius: 5px;
+      width: 120px;
+      text-align: center;
+      font-weight: bolder;
+  }
+
+  .round {
+      border-radius: 50%;
+  }
+
+
+@media only screen and (max-width: 1024px) 
+{
+        .column 
+        {
+            width: 100%;
+            margin-left: 250px;
+        }
+        .abc
+        {
+          margin-right: 0px;
+        }
+}
+
+/*-------------------------------------ACCORDIAN---------------------------------------------------*/
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+.pcs:after {
+content: " pcs";
+}
+.cur:before {
+content: "$";
+}
+.per:after {
+content: "%";
+}
+* {
+box-sizing: border-box;
+}
+body {
+padding: 0.2em 2em;
+}
+table {
+width: 100%;
+table-layout: fixed;
+
+}
+table th {
+text-align: center;
+width: 120px;
+border-bottom: 1px solid #ccc;
+}
+table th, table td {
+padding: 0.4em;
+}
+table.fold-table > tbody > tr.view td, table.fold-table > tbody > tr.view th {
+cursor: pointer;
+}
+table.fold-table > tbody > tr.view td:first-child, table.fold-table > tbody > tr.view th:first-child {
+position: relative;
+padding-left: 20px;
+}
+table.fold-table > tbody > tr.view td:first-child:before, table.fold-table > tbody > tr.view th:first-child:before {
+position: absolute;
+top: 50%;
+left: 5px;
+width: 9px;
+height: 16px;
+margin-top: -8px;
+font: 16px fontawesome;
+color: rgb(31, 31, 31);
+font-weight: bolder;
+content: "\002B";
+transition: all 0.3s ease;
+}
+table.fold-table > tbody > tr.view:nth-child(4n-1) {
+background: #eee;
+}
+table.fold-table > tbody > tr.view:hover {
+background: rgb(152, 231, 255) /*hover color */
+}
+table.fold-table > tbody > tr.view.open {
+background: #FF8A00;
+color: white;
+}
+table.fold-table > tbody > tr.view.open td:first-child:before, table.fold-table > tbody > tr.view.open th:first-child:before {
+transform: rotate(-180deg);
+content: "\2212";
+color: rgb(51, 51, 51);
+}
+table.fold-table > tbody > tr.fold {
+display: none;
+}
+table.fold-table > tbody > tr.fold.open {
+display: table-row;
+}
+.fold-content {
+padding: 0.5em;
+}
+.fold-content h3 {
+margin-top: 0;
+}
+.fold-content > table {
+border: 2px solid #ccc;
+}
+.fold-content > table > tbody tr:nth-child(even) {
+background: #eee;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+    </style>
+
+</head>
+
+<body>
+    <div>
+          <div id = "stats" style="font-size: 20px;font-family: Arial, sans-serif;margin-top:25px;margin-bottom: 10px;margin-left:60px; ">
+              <strong >Results </strong>
+          </div>
+          <br>
+          <div class="row">
+              <div class="col-sm-3" style="margin-left: 60px;">
+                <a href="applyt.html" class="btn btn-grad btn-primary" ><strong>APPLY FOR A TENDER</strong></a>
+              </div>
+              <div class="col-sm-6">
+              </div>
+              <div class="col-sm-2 abc" style="float: right;margin-right: 65px;">
+                <a href="../index.html" class="btn btn-grad btn-primary" ><strong> BACK TO HOME </strong></a>
+              </div>
+          </div>
+                
+
+      <BR>
+        <br>
+          <br><br>
+        <div>
+
+            <table class="fold-table ">
+                <thead>
+                  <tr>
+                    <th style="text-align: center;">Tender ID</th>
+                    <th style="width: 200px;padding: 40px;">TENDER NAME</th>
+                    <th style="width: 120px;">COMPANY NAME</th>
+                    <th>TENDER AMOUNT</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                      <tr class="view">
+                              <td><p id="tenid">200</p></td>
+                        <td><strong>IBM Software</strong></td>
+                            
+                            <td>2 Months</td>
+                            <td>5000000</td>
+                      </tr>
+                      <tr class="fold">
+                        <td colspan="4">
+                          <div class="fold-content">
+                            <h3>Company and Description</h3>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>     
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="view">
+                          <td><p id="tenid">340</p></td>
+                    <td><strong>Accenture Software</strong></td>
+                        
+                        <td>2 Months</td>
+                        <td>200000</td>
+                  </tr>
+                  <tr class="fold">
+                    <td colspan="4">
+                      <div class="fold-content">
+                        <h3>Company and Description</h3>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>     
+                      </div>
+                    </td>
+                  </tr>
+
+
+                  <tr class="view">
+                              <td><p id="tenid">542</p></td>
+                        <td><strong>Surya TEchnologies</strong></td>
+                            
+                            <td>2 Months</td>
+                            <td>8000000</td>
+                      </tr>
+                      <tr class="fold">
+                        <td colspan="4">
+                          <div class="fold-content">
+                            <h3>Company and Description</h3>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>     
+                          </div>
+                        </td>
+                      </tr>
+
+                 
+                </tbody>
+              </table> 
+        </div>
+        <br><br>
+          <div class="row">
+
+              <div class="column col-sm-4 col-md-4 col-lg-4 ">
+              </div>
+              <div class="column col-sm-4 col-md-4 col-lg-4 " >      
+                  <a href="#" class="previous">&laquo; Previous</a>
+                  <span style="border: #FF8A00;border-style: solid;padding: 7px;border-width: thin;">1-50 of 200 Companies</span>
+                  <a href="#" class="next">Next &raquo;</a>
+              </div>
+              <div class="column col-sm-4 col-md-4 col-lg-4 ">
+
+              </div>
+          </div>
+  </div>
+
+        <script>
+                $(function(){
+                            $(".fold-table tr.view").on("click", function()
+                            {
+                                $(this).toggleClass("open").next(".fold").toggleClass("open");
+                            });
+                            });
+        </script>
+
+
+
+</body>
+
+</html>
