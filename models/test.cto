@@ -25,6 +25,7 @@ participant TenderCompany identified by companyId {
   o String ownerName
   o String companyAddress
   o String contact
+  o Boolean isAuth default = false
 }
 
 asset Tender identified by tenderId {
