@@ -33,12 +33,12 @@ asset Tender identified by tenderId {
   o String duration
   o String department
   o String place
-  o String deadline
-  o TenderCompany[] appliedCompnies
-  o Integer[] proposedAmmounts
+  o DateTime deadline
+  o TenderCompany[] appliedCompnies optional
+  o Integer[] proposedAmmounts optional
   o Boolean isAllocated default = false
   o Boolean isOpen default = true
-  o TenderCompany allocatedCompany
+  o TenderCompany allocatedCompany optional
 }
 
 transaction TenderApplyTransaction {
@@ -49,5 +49,5 @@ transaction TenderApplyTransaction {
 
 transaction TenderAllocationTransaction {
   --> TenderCompany toCompany
-  --> Tnder ofTender
+  --> Tender ofTender
 }
