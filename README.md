@@ -89,11 +89,13 @@ Our aim is to decentralize the tender process in India, with the help of Blockch
 - Goto `http://localhost:3000/explorer` to explored the REST API
 
 # Running the Front end
+Front End: https://jogendra.github.io/OpenTender/
 - Make sure you are running the API Backend 
 - Open the `index.html` file
 - The front end is up and running 
 
 ## Demo
+UI is live here: https://jogendra.github.io/OpenTender/<br>
 For more visualization, please refer [PPT here](https://docs.google.com/presentation/d/1vqxMGqF9bOw0UcSOwBrSSTZnbY4nBoANwORb9x7Rjtg/edit?usp=sharing).
 
 
