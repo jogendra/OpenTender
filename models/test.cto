@@ -49,6 +49,5 @@ transaction TenderApplyTransaction {
 }
 
 transaction TenderAllocationTransaction {
-  --> TenderCompany toCompany
   --> Tender ofTender
 }
