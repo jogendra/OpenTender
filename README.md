@@ -79,7 +79,6 @@ Our aim is to decentralize the tender process in India, with the help of Blockch
 
 - Clone the repo `https://github.com/jogendra/OpenTender.git`
 ## Running the API Backend
-- Goto the API directory
 - First install the [Hyperledger composer](https://hyperledger.github.io/composer/latest/installing/installing-prereqs.html). Then install the [development environment](https://hyperledger.github.io/composer/latest/installing/development-tools.html).
 - `composer archive create -t dir -n .`
 - `composer network install --card PeerAdmin@hlfv1 --archiveFile api@0.0.1.bna`
